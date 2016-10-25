@@ -4,16 +4,22 @@
 	<head>
 	<meta charset="UTF-8">
 		<meta http-equiv= "Content-Type" content="text/html; charset=utf-8"/>
-		<title> Such Home Page </title>
+		<title> Such Homepage </title>
 		<link href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/superhero/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		Such Body. Very Style. Wow. So HTML
-
-		<li>
-			<img src="placeholder.jpg" alt="Cool Doge" style="width:304px; height:228px;">
-		</li>
+		<div data-role="page" id="page">
+			<div data-role="header">
+				<h1> Search</h1>
+			</div>
+			<div data-role="content">
+				<ul data-role="listview">
+					<li><a href="#Event"> Event 1 </a></li>
+					<li><a href="#Event"> Event 2 </a></li>
+					<li><a href="#Event"> Event 3 </a></li>
+				</ul>
+			</div>
 		<!-- These lines are needed for Javascript and also enables Heroku to publish our app -->
 		<script src="https://code.jquery.com/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
