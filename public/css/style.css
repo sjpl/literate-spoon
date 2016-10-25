@@ -14,5 +14,14 @@ header {
 	/*#ff0000*/
 }
 
+.topbar {
+	min-height: 100px;
+	height: 50S%;
+	background-color: darkblue;
+
+	display: flex;
+	flex-direction: row;
+}
+
 
 
