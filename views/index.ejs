@@ -1,73 +1,72 @@
-<!DOCTYPE html PUBLIC "-WAPFORUM/DTD XHTML Mobile 1.0//EN"
-"http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
-<html xmlns= "http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 	<head>
-	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta charset="utf-8"
 
 		<title>Literate-Spoon</title>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="script.js"></script>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv= "Content-Type" content="text/html; charset=utf-8"/>
 		<link href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/superhero/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 
 	<body>
-		<div>
-
-			<div class="navbar-container"> <!-- style="padding-left:130px;" -->
-				<ul id="navbar">
-					<div class="dropdown">
-  						<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" 
+		<div class = "container">
+			<div class=jumbotron> <!-- style="padding-left:130px;" -->
+				<p>
+					<ul id="navbar">
+						<li class="dropdown">
+  							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" 
   							data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
    						 	<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-  						</button>
-  						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    						<li><a href="#">Action</a></li>
-    						<li><a href="#">Another action</a></li>
-    						<li><a href="#">Something else here</a></li>
-    						<li role="separator" class="divider"></li>
-    						<li><a href="#">Separated link</a></li>
-  						</ul>
-					</div>
+  							</button>
+  							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    							<li><a href="#">Action</a></li>
+    							<li><a href="#">Another action</a></li>ss
+    							<li><a href="#">Something else here</a></li>
+    							<li role="separator" class="divider"></li>
+    							<li><a href="#">Separated link</a></li>
+  							</ul>
+						</li>
 
-					<li id="searchBar"><input type="text" name="search" placeholder="Search..."></li>
+						<li id="searchBar"><input type="text" name="search" placeholder="Search..."></li>
 
-					<li id="addEventButton">
-						<button type="button" class="btn btn-default">
-							<a href="/addeventpage"></a>
-							<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-						</button>
-					</li>
+						<li id="addEventButton">
+							<button type="button" class="btn btn-default">
+								<a href="/addeventpage"></a>
+								<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+							</button>
+						</li>
 
-					<li id="profileButton">
-						<button type="button" class="btn btn-default">
-							<a href="/profilepage.html"></a>
-							<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-						</button>
-					</li>
+						<li id="profileButton">
+							<button type="button" class="btn btn-default">
+								<a href="/profilepage"></a>
+								<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+							</button>
+						</li>
 
-				</ul>
+					</ul>
+				</p>
 			</div>
-
-			<div><p>testhelp</p></div>
-
-			<div>
-    			<ul>
-      				<li><a href="#anylink">Events</a></li>
-      				<li><a href="#anylink">Hosts</a></li>
-    			</ul>
-			</div>
-
 		</div>
 
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<ul clas="nav nav-pills nav-justified">
+						<li class="active"><a href="#">Events</a></li>
+						<li><a href="#">Host</a></li>
+					</ul>
+				</div>
+			</div>
 		</div>
 		<!-- These lines are needed for Javascript and also enables Heroku to publish our app -->
 		<script src="https://code.jquery.com/jquery.js"></script>
-		<script src="js/bootstrap.min.s"></script>
+		<script src="js/bootstrap.min.js"></script>
 	</body>
 </html>

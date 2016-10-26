@@ -17,6 +17,31 @@ app.get('/', function(req, res){
    res.render('index');
 });
 
+app.get('/addeventpage', function(req, res){
+	//ejs render automatically looks in the views folder
+	res.render(addeventpage);
+});
+
+app.get('/eventpage', function(req, res){
+	//ejs render automatically looks in the views folder
+	res.render(eventpage);
+});
+
+app.get('/hostpage', function(req, res){
+	//ejs render automatically looks in the views folder
+	res.render(hostpage);
+});
+
+app.get('/reportpage', function(req, res){
+	//ejs render automatically looks in the views folder
+	res.render(reportpage);
+});
+
+app.get('/settingspage', function(req, res){
+	//ejs render automatically looks in the views folder
+	res.render(settingspage);
+});
+
 app.listen(port, function(){
    console.log('Our app is running on http://localhost:' + port);
 });

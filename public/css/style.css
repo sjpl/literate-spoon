@@ -3,7 +3,7 @@ body {
 	
 }
 
-.container .jumbotron {
+/*.container*/ .jumbotron {
 	border-radius:40px; 
 }
 
@@ -25,6 +25,10 @@ header {
 	flex-direction: row;
 
 	/*#ff0000*/
+}
+
+li {
+	display: inline;
 }
 
 /*.tobpar > div {
