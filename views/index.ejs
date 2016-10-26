@@ -16,7 +16,7 @@
 	</head>
 
 	<body>
-		<nav class="navbar navbar-default">
+		<nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
 					<ul class="nav navbar-nav">
 						<li class="dropdown">
@@ -52,16 +52,17 @@
 			</div>
 		</nav>
 
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12">
-					<ul clas="nav nav-pills nav-justified">
-						<li class="active"><a href="#">Events</a></li>
-						<li><a href="#">Host</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
+    <div class="container">
+      <div class="tababble">
+       <ul class="nav nav-tabs">
+          <li ><!--class="active"-->
+            <a href="#tab1" data-toggle="tab">Events</a></li>
+          <li>
+            <a href="#tab2" data-toggle="tab">Hosts</a></li>
+       </ul>
+     </div>
+    </div>
+
 		<!-- These lines are needed for Javascript and also enables Heroku to publish our app -->
 		<script src="https://code.jquery.com/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>

@@ -1,10 +1,6 @@
 body {
-	/*padding-top:50px;*/
+	padding-top:50px;
 	
-}
-
-/*.container*/ .jumbotron {
-	border-radius:40px; 
 }
 
 header {
@@ -15,42 +11,41 @@ header {
 	/*#ff0000*/
 }
 
-.topbar {
-	min-height: 100px;
-	height: 50%; /* 14% for the other 6 elements. */
-	background-color: darkblue;
-
-	/*width: 350px;*/
-	display: flex;
-	flex-direction: row;
-
-	/*#ff0000*/
+.tab-content {
+ 	padding:10px;
+    border:1px solid #ddd;
+    border-bottom:0px;
+ }
+.nav-tabs {
+	border-bottom: 0px;
+}
+.nav-tabs > li {
+	margin-bottom:0;
+    margin-top:-10px;
+}
+  
+.nav-tabs > li > a {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	line-height: 20px;
+	border: 1px solid;
+    -moz-border-radius:0px;
+  	-webkit-border-radius:0px;
+  	border-radius:0px;
+	-moz-border-radius-bottomright: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	border-bottom-left-radius: 5px;
 }
 
-li {
-	display: inline;
+.nav-tabs > .active > a, 
+.nav-tabs > .active > a:hover, 
+.nav-tabs > .active > a:focus {
+	color: #555555;
+	cursor: default;
+	background-color: #ffffff;
+	border: 1px solid #ddd;
+	border-top-color: transparent;
 }
-
-/*.tobpar > div {
-	flex: 0 1 auto;
-	width: 30px;
-	transition: width 0.7s ease-out;
-}*/
-
-.topbar div.menu-button{
-	order: 1;
-}
-.topbar div.search-bar{
-	order: 2;
-}
-.topbar div.add-button{
-	order: 4;
-}
-.topbar div.profile-button{
-	order: 3;
-}
-
-.event {
-
-}
-
