@@ -1,5 +1,6 @@
 body {
-	padding-top:50px;
+	/*padding-top:50px;*/
+	
 }
 
 .container .jumbotron {
@@ -16,21 +17,36 @@ header {
 
 .topbar {
 	min-height: 100px;
-	height: 50S%;
+	height: 50%; /* 14% for the other 6 elements. */
 	background-color: darkblue;
 
+	/*width: 350px;*/
 	display: flex;
 	flex-direction: row;
+
+	/*#ff0000*/
 }
 
-.input[type=texst]{
-	width:120px;
-	-webkit-transition: width 0.4s ease-in-out;
-	transition: width 0.4s ease-in-out;
+/*.tobpar > div {
+	flex: 0 1 auto;
+	width: 30px;
+	transition: width 0.7s ease-out;
+}*/
+
+.topbar div.menu-button{
+	order: 1;
+}
+.topbar div.search-bar{
+	order: 2;
+}
+.topbar div.add-button{
+	order: 4;
+}
+.topbar div.profile-button{
+	order: 3;
 }
 
-/* When the input field gets focus, change its width to 80%*/
-input[type=text]:focus{
-	width: 80%;
+.event {
+
 }
 
