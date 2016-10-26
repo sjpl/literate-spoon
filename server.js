@@ -12,7 +12,8 @@ app.set('view engine', 'ejs');
 var router = express.Router();
 var path = __dirname + '/views/';
 
-app.use(expres.static(__dirname + '/public'));
+//make express look in the public directory for assets (css/js/img)
+app.use(express.static(__dirname + '/public'));
 
 router.use(function (req, res, next){
 	console.log("/" + req.method);
@@ -51,4 +52,4 @@ app.use("*", function(req, res){
 
 app.listen(port, function(){
 	console.log('Our app is running on http://localhost:' + port);
-}
+});
