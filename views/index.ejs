@@ -3,7 +3,7 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta charset="utf-8"
+		<meta charset="utf-8">
 
 		<title>Literate-Spoon</title>
 
@@ -16,34 +16,32 @@
 	</head>
 
 	<body>
-		<div class = "container">
-			<div class=jumbotron> <!-- style="padding-left:130px;" -->
-				<p>
-					<ul id="navbar">
+		<nav class="navbar navbar-default">
+      <div class="container-fluid">
+					<ul class="nav navbar-nav">
 						<li class="dropdown">
-  							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" 
-  							data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+  							<button class="btn btn-default dropdown-toggle" type="button"	data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
    						 	<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
   							</button>
-  							<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-    							<li><a href="#">Action</a></li>
-    							<li><a href="#">Another action</a></li>ss
-    							<li><a href="#">Something else here</a></li>
-    							<li role="separator" class="divider"></li>
-    							<li><a href="#">Separated link</a></li>
-  							</ul>
 						</li>
 
-						<li id="searchBar"><input type="text" name="search" placeholder="Search..."></li>
+            <li>
+              <form class="navbar-form navbar-left" role="search">
+               <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+               </form>
+            </li>
 
-						<li id="addEventButton">
+						<li>
 							<button type="button" class="btn btn-default">
 								<a href="/addeventpage"></a>
 								<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 							</button>
 						</li>
 
-						<li id="profileButton">
+						<li>
 							<button type="button" class="btn btn-default">
 								<a href="/profilepage"></a>
 								<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
@@ -51,9 +49,8 @@
 						</li>
 
 					</ul>
-				</p>
 			</div>
-		</div>
+		</nav>
 
 		<div class="container">
 			<div class="row">
