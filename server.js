@@ -7,10 +7,12 @@ var app = express();
 var port = process.env.PORT || 8080;
 
 //set view engine to ejs
-app.set('view', 'ejs');
+app.set('view engine', 'ejs');
 
 var router = express.Router();
 var path = __dirname + '/views/';
+
+app.use(expres.static(__dirname + '/public'));
 
 router.use(function (req, res, next){
 	console.log("/" + req.method);
