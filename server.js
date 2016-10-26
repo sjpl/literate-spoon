@@ -1,24 +1,44 @@
 
 var express = require('express');
 var app = express();
+var router = express.Router();
+var path = __dirname + '/views/';
 
-//set the port of our application
-//proces.env.PORT lets the port be set by Heroku
-var port = process.env.PORT || 8080;
-
-//set the view engine to ejs
-app.set('view engine', 'ejs');
-
-//make express look in the public directory for assets (css/js/img)
-app.use(express.static(__dirname + '/public'));
-
-//set the home page route
-app.get('/', function(req, res){
-   //ejs render automatically looks in the views folder
-   res.render('index');
+router.use(function (req, res, next){
+	console.log("/" + req.method);
+	next();
 });
 
-app.listen(port, function(){
-   console.log('Our app is running on http://localhost:' + port);
+router.get("/", function(req, res){
+	res.sendFile(path + "homepage.html");
 });
 
+router.get("/eventpage", function(req,res){
+	res.sendFile(path + "eventpage.html");
+});
+
+router.get("/hostpage", function(req, res){
+	res.sendFile(path + "hostpage.html");
+});
+
+router.get("/profilepage", function(req, res){
+	res.sendFile(path + "profilepage.html");
+});
+
+router.get("/addeventpage", function(req, res){
+	res.sendFile(path + "addeventpage.html");
+});
+
+router.get("/reportpage", function(req, res){
+	res.sendFile(path + "reportpage.html");
+}); 
+
+app.use("/", router);
+
+app.use("*", function(req, res){
+	res.sendFile(path + "404.html");
+});
+
+app.listen(3000, function(){
+	console.log("Live at Port 3000");	
+});

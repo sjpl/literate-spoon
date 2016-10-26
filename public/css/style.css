@@ -23,5 +23,14 @@ header {
 	flex-direction: row;
 }
 
+.input[type=texst]{
+	width:120px;
+	-webkit-transition: width 0.4s ease-in-out;
+	transition: width 0.4s ease-in-out;
+}
 
+/* When the input field gets focus, change its width to 80%*/
+input[type=text]:focus{
+	width: 80%;
+}
 
