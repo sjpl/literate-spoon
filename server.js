@@ -1,6 +1,14 @@
 
 var express = require('express');
 var app = express();
+
+//set the port of our application
+//proces.env.PORT lets the port 
+var port = process.env.PORT || 8080;
+
+//set view engine to ejs
+app.set('view', 'ejs');
+
 var router = express.Router();
 var path = __dirname + '/views/';
 
@@ -39,6 +47,6 @@ app.use("*", function(req, res){
 	res.sendFile(path + "404.html");
 });
 
-app.listen(3000, function(){
-	console.log("Live at Port 3000");	
-});
+app.listen(port, function(){
+	console.log('Our app is running on http://localhost:' + port);
+}
