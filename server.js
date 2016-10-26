@@ -21,7 +21,7 @@ router.use(function (req, res, next){
 });
 
 router.get("/", function(req, res){
-	res.sendFile(path + "homepage.html");
+	res.sendFile(path + "index.ejs");
 });
 
 router.get("/eventpage", function(req,res){
