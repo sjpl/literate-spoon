@@ -48,6 +48,15 @@
 								<span class="glyphicon glyphicon-user" aria-hidden="true"></span></a>
 						</button>
 					</li>
+
+					<!-- Placeholder button to close screen & go back to homepage. -->
+					<li>
+						<button type="button" class="btn btn-default">
+							<a href="/">
+								<span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></a>
+						</button>
+					</li>
+
 				</ul>
 			</div>
 		</nav>
@@ -56,9 +65,9 @@
     		<div class="tababble">
     			<ul class="nav nav-tabs">
     				<li ><!--class="active"-->
-            			<a href="/" data-toggle="tab">Events</a></li>
+            			<a href="/profilepage" data-toggle="tab">Following</a></li>
           			<li>
-            			<a href="/hostlist" data-toggle="tab">Hosts</a></li>
+            			<a href="/profilepage-notification" data-toggle="tab">Notifications</a></li>
        			</ul>
     		</div>
     	<!-- </div> -->
@@ -67,7 +76,7 @@
      		<table>
         		<tr>
           			<td rowspan="2"><img src="images/{{image}}" class="image"></td>
-          			<td><a href="#{{id}}">{{name}}</a></td>
+          			<td><a href="#{{id}}">Event</a></td>
         		</tr>
         		<tr>
           			<td><p>Date | Time | Location</p></td>
