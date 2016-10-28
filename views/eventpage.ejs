@@ -19,7 +19,7 @@
 		<nav class="navbar navbar-default navbar-fixed-top">
       		<div class="container-fluid">
 				<ul class="nav navbar-nav">
-					<li class="dropdown">s
+					<li class="dropdown">
               <!-- <button class="btn btn-default dropdown-toggle" type="button"	data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
    						  <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
   						</button> -->
@@ -66,8 +66,17 @@
         									<tr>
           										<td><p>Date | Time | Location</p></td>
         									</tr>
+        									<tr>
+        										<td>
+        											<div class="dropdown">
+  														<button id="myButton" onClick="lock(); toggleText(this.id);" class="followButton">Not Following</button>
+													</div>
+												</td>
+        									<tr>
       									</table>
 									</div>
+									<p>
+									</p>
 
     <div class="container">
       <div class="tababble">
@@ -83,6 +92,24 @@
     <p>
     	Description of the event.
     </p>
+
+
+    	<script>
+
+
+      		function toggleText(button_id) 
+			{
+   				if (document.getElementById('button_id').innerHTML == "Not Following") 
+   				{
+       				document.getElementById('button_id').innerHTML = "Following";
+  				}
+   				else 
+   				{
+     				document.getElementById('button_id').innerHTML = "Not Following";
+  				}
+			}
+    	</script>
+
 
 		<!-- These lines are needed for Javascript and also enables Heroku to publish our app -->
 		<script src="https://code.jquery.com/jquery.js"></script>
