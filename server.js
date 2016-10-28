@@ -19,6 +19,12 @@ app.get('/', function(request, response){
 app.get('/hostlist', function(request, response){
 	response.render('hostlist');
 });
+app.get('/hostpage', function(request, response){
+	response.render('hostpage');
+});
+app.get('/hostpage-pastevents', function(request, response){
+	response.render('hostpage-pastevents');
+});
 app.get('/profilepage', function(request, response){
 	response.render('profilepage');
 });
