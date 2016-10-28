@@ -69,7 +69,8 @@
         									<tr>
         										<td>
         											<div class="dropdown">
-  														<button id="myButton" onClick="lock(); toggleText(this.id);" class="followButton">Not Following</button>
+        												<input onclick="change()" type="button" value="Not Following" id="myButton1"></input>
+  														<!--<button id="myButton" onClick="lock(); toggleText(this.id);" class="followButton">Not Following</button>-->
 													</div>
 												</td>
         									<tr>
@@ -95,18 +96,11 @@
 
 
     	<script>
-
-
-      		function toggleText(button_id) 
+    		function change() // no ';' here
 			{
-   				if (document.getElementById('button_id').innerHTML == "Not Following") 
-   				{
-       				document.getElementById('button_id').innerHTML = "Following";
-  				}
-   				else 
-   				{
-     				document.getElementById('button_id').innerHTML = "Not Following";
-  				}
+   				var elem = document.getElementById("myButton1");
+    			if (elem.value=="Not Following") elem.value = "Following";
+    			else elem.value = "Not Following";
 			}
     	</script>
 
