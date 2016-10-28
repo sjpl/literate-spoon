@@ -69,6 +69,8 @@
       									</table>
 									</div>
 
+
+
     <div class="container">
       <div class="tababble">
        <ul class="nav nav-tabs">
@@ -81,6 +83,20 @@
     </div>
 
     <div class="row-bottom-margin" role="row">
+                      <table>
+                          <tr>
+                              <td>
+                                <form class="navbar-form navbar-left" role="search">
+                                  <div class="form-group">
+                                 <input type="text" class="form-control" placeholder="Add to the discussion.">
+            </div>
+        </form>
+                              </td>
+                              <td>
+                                  <button type="submit" class="btn btn-default" onclick="change()">Submit</button>
+                              </td>
+                          </tr>
+                      </table>
                      <table>
                           <tr>
                               <td rowspan="2"><img src="images/{{image}}" class="image"></td>
@@ -146,6 +162,15 @@
                           </tr>
                         </table>
                   </div>
+
+    <script>
+      function change() // no ';' here
+{
+    var elem = document.getElementById("myButton1");
+    if (elem.value=="Close Curtain") elem.value = "Open Curtain";
+    else elem.value = "Close Curtain";
+}
+    </script>
 		<!-- These lines are needed for Javascript and also enables Heroku to publish our app -->
 		<script src="https://code.jquery.com/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
