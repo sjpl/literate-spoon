@@ -19,7 +19,7 @@
 		<nav class="navbar navbar-default navbar-fixed-top">
       		<div class="container-fluid">
 				<ul class="nav navbar-nav">
-					<li class="dropdown">
+					<li class="dropdown">s
               <!-- <button class="btn btn-default dropdown-toggle" type="button"	data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
    						  <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
   						</button> -->
@@ -57,32 +57,35 @@
 			</div>
 		</nav>
 
-    	<!-- <div class="container"> -->
-    		<div class="tababble">
-    			<ul class="nav nav-tabs">
-    				<li ><!--class="active"-->
-            			<a href="/profilepage" data-toggle="tab">Following</a></li>
-          			<li>
-            			<a href="/profilepage-notification" data-toggle="tab">Notifications</a></li>
-       			</ul>
-    		</div>
-    	<!-- </div> -->
+		<div class="row-bottom-margin" role="row">
+										 <table>
+       										<tr>
+          										<td rowspan="2"><img src="images/{{image}}" class="image"></td>
+         										<td><a href="#{{id}}">{{name}}</a></td>
+        									</tr>
+        									<tr>
+          										<td><p>Date | Time | Location</p></td>
+        									</tr>
+      									</table>
+									</div>
 
-    	<div>
-     		<table>
-        		<tr>
-          			<td rowspan="2"><img src="images/{{image}}" class="image"></td>
-          			<td><a href="#{{id}}">Event</a></td>
-        		</tr>
-        		<tr>
-          			<td><p>Date | Time | Location</p></td>
-        		</tr>
-      		</table>
-    	</div>
+    <div class="container">
+      <div class="tababble">
+       <ul class="nav nav-tabs">
+          <li ><!--class="active"-->
+            <a href="/eventpage" data-toggle="tab">About</a></li>
+          <li>
+            <a href="/discusspage" data-toggle="tab">Discuss</a></li>
+       </ul>
+     </div>
+    </div>
+
+    <p>
+    	Description of the event.
+    </p>
 
 		<!-- These lines are needed for Javascript and also enables Heroku to publish our app -->
 		<script src="https://code.jquery.com/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 	</body>
 </html>
-
