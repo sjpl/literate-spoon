@@ -5,12 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
 
-    <title>Literate-Spoon</title>
+    <title>Add Event</title>
 
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="script.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/superhero/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
   </head>
 
@@ -58,7 +56,21 @@
     </nav>
 
     <div class="row-bottom-margin" role="row">
-      <table>
+        <form name="createEvent" method="" action="" onsubmit="return validateForm(this)">
+            <input type="button" name="addImage" value="img"/><br />
+            <input type="text" name="EventName" value="eventName"/><br />
+            <input type="text" name="startDate" value="eventstartDate"/>
+            <input type="text" name="startTime"
+            value="eventstartTime"/><br />
+            <input type="text" name="endDate"
+            value="eventendDate"/>
+            <input type="text" name="endTime" value="eventendTime"/><br />
+            <input type="text" name="Details" value="eventDetials"/><br />
+            <input type="button" name="Import"
+            value="eventPhoto"/>
+        </form>
+    
+     <!-- <table>
         <tr>
           <td>Add Event</td>
           <td><a class="btn btn-default" href="#">Import 
@@ -120,10 +132,11 @@
                       
                   </a></td>
         </tr>
-      </table>
+      </table>-->
     </div>
     <!-- These lines are needed for Javascript and also enables Heroku to publish our app -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/addevent.js"></script>
   </body>
 </html>
