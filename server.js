@@ -13,41 +13,41 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 //create link to other pages in the views directory
-app.get('/', function(request, response){
-	response.render('index');
+app.get('/', function (request, response) {
+    response.render('index');
 });
-app.get('/hostlist', function(request, response){
-	response.render('hostlist');
+app.get('/hostlist', function (request, response) {
+    response.render('hostlist');
 });
-app.get('/hostpage', function(request, response){
-	response.render('hostpage');
+app.get('/hostpage', function (request, response) {
+    response.render('hostpage');
 });
-app.get('/hostpage-pastevents', function(request, response){
-	response.render('hostpage-pastevents');
+app.get('/hostpage-pastevents', function (request, response) {
+    response.render('hostpage-pastevents');
 });
-app.get('/profilepage', function(request, response){
-	response.render('profilepage');
+app.get('/profilepage', function (request, response) {
+    response.render('profilepage');
 });
-app.get('/profilepage-notification', function(request, response){
-	response.render('profilepage-notification');
+app.get('/profilepage-notification', function (request, response) {
+    response.render('profilepage-notification');
 });
-app.get('/filterpage', function(request, response){
-	response.render('filterpage');
-});
-
-app.get('/addeventpage', function(request, response){
-	response.render('addeventpage');
-});
-app.get('/eventpage', function(request, response){
-	response.render('eventpage');
-});
-app.get('/aboutpage', function(request, response){
-	response.render('aboutpage');
-});
-app.get('/discusspage', function(request, response){
-	response.render('discusspage');
+app.get('/filterpage', function (request, response) {
+    response.render('filterpage');
 });
 
-app.listen(app.get('port'), function(){
-	console.log('Node app is running on port', app.get('port'));
+app.get('/addeventpage', function (request, response) {
+    response.render('addeventpage');
+});
+app.get('/eventpage', function (request, response) {
+    response.render('eventpage');
+});
+app.get('/aboutpage', function (request, response) {
+    response.render('aboutpage');
+});
+app.get('/discusspage', function (request, response) {
+    response.render('discusspage');
+});
+
+app.listen(app.get('port'), function () {
+    console.log('Node app is running on port', app.get('port'));
 });
