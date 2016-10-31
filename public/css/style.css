@@ -71,7 +71,7 @@ header {
 	border-top-color: transparent;
 }
 
-@media (max-width: 9999px) {
+ /*@media (max-width: 9999px) {
     .navbar-header {
         float: none;
     }
@@ -100,11 +100,10 @@ header {
         float: none;
         margin: 15px 0;
     }
-    /* since 3.1.0 */
     .navbar-collapse.collapse.in { 
         display: block!important;
     }
     .collapsing {
         overflow: hidden!important;
-    }
-}
+    } 
+} */
