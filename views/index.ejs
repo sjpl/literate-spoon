@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,42 +10,76 @@
     <!--    <link href="css/spacelab.css" rel="stylesheet">-->
     <link href="css/style.css" rel="stylesheet">
 
-</head>
-<div class="custom-container">
-    <div class="navigationbar-flex navbar-default">
-        <div class="navigationbar-flexleft">
-            <a class="navigationbar-item" href="">
-                <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-            </a>
-            <!--
+    <!-- These lines are needed for Javascript and also enables Heroku to publish our app -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script language="JavaScript" type="text/javascript">
+        function login(showhide) {
+            if (showhide == "show") {
+                document.getElementById('popupbox').style.visibility = "visible";
+            } else if (showhide == "hide") {
+                document.getElementById('popupbox').style.visibility = "hidden";
+            }
+        }
+    </script>
+
+    </head>
+    <div class="custom-container">
+        <div class="navigationbar-flex navbar-default">
+            <div class="navigationbar-flexleft">
+                <a class="navigationbar-item" href="">
+                    <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                </a>
+                <!--
             <a class="navigationbar-item" href="">
                 <i class="fa fa-caret-down" color:black></i>
             </a>
 -->
+            </div>
+            <form class="search-form">
+                <input type="text" class="search-box" placeholder="Search">
+            </form>
+            <div class="navigationbar-flexright">
+                <a class="navigationbar-item btn btn-default" href="javascript:login('show')">
+                    <span>Login</span>
+                    <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                </a>
+                <div id="popupbox">
+                    <form name="login" action="" method="post">
+                        <center>Username:</center>
+                        <center>
+                            <input name="username" size="14">
+                        </center>
+                        <center>Password:</center>
+                        <center>
+                            <input name="password" type="password" size="14">
+                        </center>
+                        <center><a href="/indexin">Submit</a></center>
+                        <center><a href="javascript:login('hide')">Close</a></center>
+                    </form>
+                </div>
+                <a class="navigationbar-item" href="">
+                    <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                </a>
+            </div>
         </div>
-        <form class="search-form">
-            <input type="text" class="search-box" placeholder="Search">
-        </form>
-        <div class="navigationbar-flexright">
-            <a class="navigationbar-item" href="">
-                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-            </a>
-            <a class="navigationbar-item" href="">
-                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-            </a>
-            <a class="navigationbar-item" href="">
-                <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-            </a>
-        </div>
+
     </div>
 
-</div>
 
-
-<div class="container">
-
-
-    <body>
+    <!-- <div class="container"> -->
+    <div class="tababble">
+        <ul class="nav nav-tabs">
+            <li>
+                <!--class="active"-->
+                <a href="/" data-toggle="tab">Events</a></li>
+            <li>
+                <a href="/hostlist" data-toggle="tab">Hosts</a></li>
+        </ul>
+    </div>
+    <!-- </div> -->
+    <div class="container">
         <main class="main" role="main">
             <div class="submain">
                 <section class="eventfeed" role="region">
@@ -141,13 +174,11 @@
                 </section>
             </div>
         </main>
-    </body>
-</div>
+    </div>
 
-<!-- These lines are needed for Javascript and also enables Heroku to publish our app -->
-<script src="https://code.jquery.com/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/index.js"></script>
-</body>
+
+
+
+    </body>
 
 </html>
