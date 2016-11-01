@@ -16,6 +16,9 @@ app.set('view engine', 'ejs');
 app.get('/', function(request, response){
 	response.render('index');
 });
+app.get('/indexin', function(request, response){
+	response.render('indexin');
+});
 app.get('/hostlist', function(request, response){
 	response.render('hostlist');
 });

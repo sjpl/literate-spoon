@@ -6,12 +6,39 @@
 		<meta charset="utf-8">
 
 		<title>Literate-Spoon</title>
+        
+        <style type="text/css">
+            #popupbox{
+            margin: 0; 
+            margin-left: 40%; 
+            margin-right: 40%;
+            margin-top: 50px; 
+            padding-top: 10px; 
+            width: 160%; 
+            height: 150px; 
+            position: absolute; 
+            background: #FBFBF0; 
+            border: solid #000000 2px; 
+            z-index: 9; 
+            font-family: arial; 
+            visibility: hidden; 
+            }
+        </style>
+
+        <script language="JavaScript" type="text/javascript">
+            function login(showhide){
+            if(showhide == "show"){
+                document.getElementById('popupbox').style.visibility="visible";
+            }else if(showhide == "hide"){
+                document.getElementById('popupbox').style.visibility="hidden"; 
+            }
+            }
+        </script>
 
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="script.js"></script>
-		<link href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/superhero/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 
@@ -30,23 +57,29 @@
 
           <li>
             <form class="navbar-form navbar-left" role="search">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search">
+                <div class="form-group">
+                <input type="text" class="form-control" placeholder="🔎 Search">
               </div>
-              <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
             </form>
           </li>
 
 					<li>
-            <a class="btn btn-default" href="/addeventpage">
-              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            <a class="btn btn-default" href="javascript:login('show');">
+            <span>Login</span>
+            <span class="glyphicon glyphicon-log-in" aria-hidden="true"> 
+            </span>
             </a>
-					</li>
-
-					<li>
-            <a class="btn btn-default" href="/profilepage">
-              <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-            </a>
+                        <div id="popupbox"> 
+                            <form name="login" action="" method="post">
+                            <center>Username:</center>
+                            <center><input name="username" size="14" /></center>
+                            <center>Password:</center>
+                            <center><input name="password" type="password" size="14" /></center>
+                            <center><a href="/indexin">Submit </a></center>
+                            <center><a href="javascript:login('hide')">Close</a></center> 
+                            </form>
+                        </div>
+            
 					</li>
 				</ul>
 			</div>
@@ -149,5 +182,7 @@
 		<!-- These lines are needed for Javascript and also enables Heroku to publish our app -->
 		<script src="https://code.jquery.com/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+     
+        
 	</body>
 </html>
