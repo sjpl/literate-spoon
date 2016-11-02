@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,23 +25,19 @@
         }
     </script>
 
-    </head>
+</head>
+<header>
     <div class="custom-container">
         <div class="navigationbar-flex navbar-default">
-            <div class="navigationbar-flexleft">
+            <div class="flexleft">
                 <a class="navigationbar-item" href="">
                     <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
                 </a>
-                <!--
-            <a class="navigationbar-item" href="">
-                <i class="fa fa-caret-down" color:black></i>
-            </a>
--->
             </div>
-            <form class="search-form">
+            <form class="search-form flexleft">
                 <input type="text" class="search-box" placeholder="Search">
             </form>
-            <div class="navigationbar-flexright">
+            <div class="flexright">
                 <a class="navigationbar-item btn btn-default" href="javascript:login('show')">
                     <span>Login</span>
                     <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
@@ -64,121 +61,133 @@
                 </a>
             </div>
         </div>
+        <div class="flexbox flex-tabs">
+            <a href="">
+                <div class="active">Events</div>
+            </a>
+            <a href="">
+                <div>Hosts</div>
+            </a>
+        </div>
+
+        <!--    <ul class="nav nav-tabs nav-justified">-->
+        <!--
+    <ul class="">
+        <li role="presentation" class="active"><a href="/">Events</a></li>
+        <li role="presentation"><a href="/hostlist">Hosts</a></li>
+    </ul>
+-->
 
     </div>
+</header>
+<div class="container">
 
+    <!--
+    <ul class="nav nav-tabs nav-justified">
+        <li role="presentation" class="active"><a href="/">Events</a></li>
+        <li role="presentation"><a href="/hostlist">Hosts</a></li>
+    </ul>
+-->
 
-    <!-- <div class="container"> -->
-    <div class="tababble">
-        <ul class="nav nav-tabs">
-            <li>
-                <!--class="active"-->
-                <a href="/" data-toggle="tab">Events</a></li>
-            <li>
-                <a href="/hostlist" data-toggle="tab">Hosts</a></li>
-        </ul>
-    </div>
-    <!-- </div> -->
-    <div class="container">
-        <main class="main" role="main">
-            <div class="submain">
-                <section class="eventfeed" role="region">
-                    <!--<h3 class="YourEventFeed"> Your Event Feed</h3>-->
-                    <div aria-readonly="true" class="ActualEventFeed" aria-label="Event Timeline: Your Event Timeline" role="grid">
-                        <div role="rowgroup">
-                            <div style="padding-bottom: 0px;">
-                                <div style="padding-top: 0px; padding-bottom: 400px;">
-                                    <div></div>
-                                    <div class="row-bottom-margin" role="row">
-                                        <table>
-                                            <tr>
-                                                <td rowspan="2"><img src="images/{{image}}" class="image"></td>
-                                                <td><a href="/eventpage">Event</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <p>Date | Time | Location</p>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="row-bottom-margin" role="row">
-                                        <table>
-                                            <tr>
-                                                <td rowspan="2"><img src="images/{{image}}" class="image"></td>
-                                                <td><a href="/eventpage">Event</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <p>Date | Time | Location</p>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="row-bottom-margin" role="row">
-                                        <table>
-                                            <tr>
-                                                <td rowspan="2"><img src="images/{{image}}" class="image"></td>
-                                                <td><a href="/eventpage">Event</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <p>Date | Time | Location</p>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="row-bottom-margin" role="row">
-                                        <table>
-                                            <tr>
-                                                <td rowspan="2"><img src="images/{{image}}" class="image"></td>
-                                                <td><a href="/eventpage">Event</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <p>Date | Time | Location</p>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="row-bottom-margin" role="row">
-                                        <table>
-                                            <tr>
-                                                <td rowspan="2"><img src="images/{{image}}" class="image"></td>
-                                                <td><a href="/eventpage">Event</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <p>Date | Time | Location</p>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="row-bottom-margin" role="row">
-                                        <table>
-                                            <tr>
-                                                <td rowspan="2"><img src="images/{{image}}" class="image"></td>
-                                                <td><a href="/eventpage">Event</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <p>Date | Time | Location</p>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
+    <main class="main" role="main">
+        <div class="submain">
+            <section class="eventfeed" role="region">
+                <!--<h3 class="YourEventFeed"> Your Event Feed</h3>-->
+                <div aria-readonly="true" class="ActualEventFeed" aria-label="Event Timeline: Your Event Timeline" role="grid">
+                    <div role="rowgroup">
+                        <div style="padding-bottom: 0px;">
+                            <div style="padding-top: 0px; padding-bottom: 400px;">
+                                <div></div>
+                                <div class="row-bottom-margin" role="row">
+                                    <table>
+                                        <tr>
+                                            <td rowspan="2"><img src="images/{{image}}" class="image"></td>
+                                            <td><a href="/eventpage">Event</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>Date | Time | Location</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="row-bottom-margin" role="row">
+                                    <table>
+                                        <tr>
+                                            <td rowspan="2"><img src="images/{{image}}" class="image"></td>
+                                            <td><a href="/eventpage">Event</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>Date | Time | Location</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="row-bottom-margin" role="row">
+                                    <table>
+                                        <tr>
+                                            <td rowspan="2"><img src="images/{{image}}" class="image"></td>
+                                            <td><a href="/eventpage">Event</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>Date | Time | Location</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="row-bottom-margin" role="row">
+                                    <table>
+                                        <tr>
+                                            <td rowspan="2"><img src="images/{{image}}" class="image"></td>
+                                            <td><a href="/eventpage">Event</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>Date | Time | Location</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="row-bottom-margin" role="row">
+                                    <table>
+                                        <tr>
+                                            <td rowspan="2"><img src="images/{{image}}" class="image"></td>
+                                            <td><a href="/eventpage">Event</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>Date | Time | Location</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="row-bottom-margin" role="row">
+                                    <table>
+                                        <tr>
+                                            <td rowspan="2"><img src="images/{{image}}" class="image"></td>
+                                            <td><a href="/eventpage">Event</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p>Date | Time | Location</p>
+                                            </td>
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
-            </div>
-        </main>
-    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</div>
 
 
 
 
-    </body>
+</body>
 
 </html>
