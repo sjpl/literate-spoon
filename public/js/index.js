@@ -1,8 +1,18 @@
-//Get all of our data
+'use strict';
 
-var data = require('../data.json');
+// Call this function when the page loads (the "ready" event)
+$(document).ready(function () {
+    initializePage();
+})
 
-exports.view = function(req,res){
-    console.log(data);
-    res.render('index');
+/*
+ * Function that is called when the document is ready.
+ */
+function initializePage() {
+    console.log("Javascript connected!");
+
+    // calculating margin-left to align it to center;
+    var width = $('.justified').width();
+    $('.justified').css('margin-left', '-' + (width / 2)+'px');
+
 }

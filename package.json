@@ -2,13 +2,10 @@
   "name": "literate-spoon",
   "description": "Setting up server",
   "main": "server.js",
-  "scripts": {
+  "scripts":{
     "start": "node server.js"
   },
   "dependencies": {
-    "chart.js": "^2.3.0",
-    "express": "*",
-    "handlebars": "^4.0.5",
-    "body-parser":"*"
+    "express": "latest"
   }
 }
