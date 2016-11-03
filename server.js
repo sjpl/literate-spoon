@@ -16,8 +16,11 @@ app.set('view engine', 'ejs');
 app.get('/', function (request, response) {
     response.render('index');
 });
-app.get('/hostlist', function (request, response) {
-    response.render('hostlist');
+app.get('/indexin', function(request, response){
+	response.render('indexin');
+});
+app.get('/hostlist', function (request, response){
+	response.render('hostlist');
 });
 app.get('/hostpage', function (request, response) {
     response.render('hostpage');
