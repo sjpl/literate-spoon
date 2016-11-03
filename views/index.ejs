@@ -9,7 +9,6 @@
     <link href="css/bootstrap-theme.css" rel="stylesheet">
     <!--    <link href="css/spacelab.css" rel="stylesheet">-->
     <link href="css/style.css" rel="stylesheet">
-
     <!-- These lines are needed for Javascript and also enables Heroku to publish our app -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -26,7 +25,7 @@
         }
     </script>
 
-    </head>
+</head>
     
 <body>    
     <div class="custom-container">
@@ -95,7 +94,7 @@
                                         <a href="#" class="poster-card__mainjs-event-link" data-type="popular" data-automation="event-card">
                                             <div class="poster-card__header">
                                                 <div class="poster-card__image">
-                                                    <img class="img-responsive" src="" alt="">
+                                                    <img class="img-responsive" src="{{img}}" alt="">
                                                 </div>
                                             </div>
                                             <div class="poster-card__body">
@@ -120,15 +119,15 @@
             </section>
     </div>
     
-<script type="text/javascript">
-    var eventInfo = document.getElementById("show-events").innerHTML;
-    var template = Handlebars.compile(eventInfo);
-    var data = require('../data.json');
-        exports.view = function(req, res){
+    <script type="text/javascript">
+        var eventInfo = document.getElementById("show-events").innerHTML;
+        var template = Handlebars.compile(eventInfo);
+        var data = require('../data.json');
+            exports.view = function(req, res){
         console.log(data);
         res.render('index.ejs');
     }                    
-    document.getElementById("data").innerHTML == data;
-</script>
+        document.getElementById("data").innerHTML == data;
+    </script>
 </body>
 </html>
