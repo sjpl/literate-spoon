@@ -5,12 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
 
-    <title>Literate-Spoon</title>
+    <title>Add Event</title>
 
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="script.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/superhero/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
   </head>
 
@@ -58,7 +56,31 @@
     </nav>
 
     <div class="row-bottom-margin" role="row">
-      <table>
+        <form name="createEvent" onsubmit="return checkform(this)">
+            <header>
+                <h2>Create Event</h2>
+                <p>Fill out all fields to upload event!</p>
+            </header>
+            <label>Import Image</label>
+            <input type="button" name="addImage" value="img"/><br />
+            <label>Event Name</label>
+            <input type="text" name="EventName" value="Enter Event Name"/><br />
+            <label>Start Date</label>
+            <input type="text" name="startDate" value=""/>
+            <lable>Start Time</lable>
+            <input type="text" name="startTime"
+            value=""/><br />
+            <lable>End Date</lable>
+            <input type="text" name="endDate"
+            value=""/>
+            <lable>End Time</lable>
+            <input type="text" name="endTime" value=""/><br />
+            <lable>Details</lable>
+            <textarea col="15" name="details" placeholder="Details about the event." rows="10"></textarea><br />
+            <input class="submit" type="submit" value="Create Event">
+        </form>
+    
+     <!-- <table>
         <tr>
           <td>Add Event</td>
           <td><a class="btn btn-default" href="#">Import 
@@ -120,10 +142,11 @@
                       
                   </a></td>
         </tr>
-      </table>
+      </table>-->
     </div>
     <!-- These lines are needed for Javascript and also enables Heroku to publish our app -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/addevent.js"></script>
   </body>
 </html>

@@ -1,4 +1,11 @@
 var express = require('express');
+var http = require('http');
+var path = require('path');
+var handlebars = require('handlebars');
+var connect = require('connect');
+
+var index = require('./routes/index');
+
 var app = express();
 
 //set the port of our application 
@@ -12,6 +19,10 @@ app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
+/*app.engine('handlebars', handlebars());
+app.set('view engine', 'handlebars');
+app.use(express.json());
+*/ 
 //create link to other pages in the views directory
 app.get('/', function (request, response) {
     response.render('index');

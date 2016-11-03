@@ -9,10 +9,10 @@
     <link href="css/bootstrap-theme.css" rel="stylesheet">
     <!--    <link href="css/spacelab.css" rel="stylesheet">-->
     <link href="css/style.css" rel="stylesheet">
-
     <!-- These lines are needed for Javascript and also enables Heroku to publish our app -->
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/handlebars-v4.0.5.js"></script>
+    <!--<script src="js/index.js"></script>-->
 
     <script language="JavaScript" type="text/javascript">
         function login(showhide) {
@@ -24,7 +24,9 @@
         }
     </script>
 
-    </head>
+</head>
+    
+<body>    
     <div class="custom-container">
         <div class="navigationbar-flex navbar-default">
             <div class="navigationbar-flexleft">
@@ -78,107 +80,51 @@
                 <a href="/hostlist" data-toggle="tab">Hosts</a></li>
         </ul>
     </div>
-    <!-- </div> -->
-    <div class="container">
-        <main class="main" role="main">
-            <div class="submain">
-                <section class="eventfeed" role="region">
-                    <!--<h3 class="YourEventFeed"> Your Event Feed</h3>-->
-                    <div aria-readonly="true" class="ActualEventFeed" aria-label="Event Timeline: Your Event Timeline" role="grid">
-                        <div role="rowgroup">
-                            <div style="padding-bottom: 0px;">
-                                <div style="padding-top: 0px; padding-bottom: 400px;">
-                                    <div></div>
-                                    <div class="row-bottom-margin" role="row">
-                                        <table>
-                                            <tr>
-                                                <td rowspan="2"><img src="images/{{image}}" class="image"></td>
-                                                <td><a href="/eventpage">Event</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <p>Date | Time | Location</p>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="row-bottom-margin" role="row">
-                                        <table>
-                                            <tr>
-                                                <td rowspan="2"><img src="images/{{image}}" class="image"></td>
-                                                <td><a href="/eventpage">Event</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <p>Date | Time | Location</p>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="row-bottom-margin" role="row">
-                                        <table>
-                                            <tr>
-                                                <td rowspan="2"><img src="images/{{image}}" class="image"></td>
-                                                <td><a href="/eventpage">Event</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <p>Date | Time | Location</p>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="row-bottom-margin" role="row">
-                                        <table>
-                                            <tr>
-                                                <td rowspan="2"><img src="images/{{image}}" class="image"></td>
-                                                <td><a href="/eventpage">Event</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <p>Date | Time | Location</p>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="row-bottom-margin" role="row">
-                                        <table>
-                                            <tr>
-                                                <td rowspan="2"><img src="images/{{image}}" class="image"></td>
-                                                <td><a href="/eventpage">Event</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <p>Date | Time | Location</p>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                    <div class="row-bottom-margin" role="row">
-                                        <table>
-                                            <tr>
-                                                <td rowspan="2"><img src="images/{{image}}" class="image"></td>
-                                                <td><a href="/eventpage">Event</a></td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <p>Date | Time | Location</p>
-                                                </td>
-                                            </tr>
-                                        </table>
+        
+    <div class="g-grid">
+            <section class="1-pad-bot-5 1-sm-pad-bot-3">
+    
+                <div class="js-popular-events">
+                    <div class="js-events-list">
+                        <script id="show-events" type="text/x-handlebars-template">
+                            {{#each events}}
+                                <div class="g-cell g-cell--has-overflow g-cell-1-1 g-cell-md-1-2-g-cell-lg-1-3 1-pad-vert-3">
+                                    <div class="poster-card js-d-poster" data-share-url="#" data-share-name="#">
+                                        <a href="#" class="poster-card__mainjs-event-link" data-type="popular" data-automation="event-card">
+                                            <div class="poster-card__header">
+                                                <div class="poster-card__image">
+                                                    <img class="img-responsive" src="{{img}}" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="poster-card__body">
+                                                <time class="poster-card__date"> {{eventTime}} </time>
+                                                <div class="poster-card__title">{{eventName}}
+                                                </div>
+                                                <div class="poster-card__venue"> {{location}}
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div class="poster-card__footer">
+                                            <div class="poster-card__tags">
+                                                <a class="event-category" href="">#{{category}}</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </main>
+                            {{/each}}
+                        </script>                           
+                    </div>   
+                </div>
+            </section>
     </div>
-
-
-
-
-    </body>
-
+    
+    <script type="text/javascript">
+        var eventInfo = document.getElementById("show-events").innerHTML;
+        var template = Handlebars.compile(eventInfo);
+        $.getJSON('../data.json', function(data){
+            console.log(data);          
+        });                  
+        document.getElementById("data").innerHTML == data;
+    </script>
+</body>
 </html>
