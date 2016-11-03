@@ -14,11 +14,18 @@ app.set('views', __dirname + '/views');
 app.engine('handlebars', handlebars());
 app.set('view engine', 'handlebars');
 
+var fs = require('fs');
+var dataVar;
+fs.readFile('public/data/data.json', 'utf8', function (err, data) {
+  if (err) {
+    return console.log(err);
+  }
+  dataVar = JSON.parse(data);
+});
 
-
-//create link to other pages in the views directory
-app.get('/', function (request, response) {
-    response.render('index');});
+app.get('/', function(request, response) {
+    response.render('index', dataVar);
+});
 app.get('/indexin', function(request, response){
 	response.render('indexin');});
 app.get('/hostlist', function (request, response){

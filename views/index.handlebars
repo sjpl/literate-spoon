@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,8 +26,8 @@
     </script>
 
 </head>
-    
-<body>    
+
+<body>
     <div class="custom-container">
         <div class="navigationbar-flex navbar-default">
             <div class="navigationbar-flexleft">
@@ -80,24 +81,23 @@
                 <a href="/hostlist" data-toggle="tab">Hosts</a></li>
         </ul>
     </div>
-        
+
     <div class="g-grid">
-            <section class="1-pad-bot-5 1-sm-pad-bot-3">    
-                <div class="js-popular-events">
-                    <div class="js-events-list">
-                        
-                            {{#each events}}
-                                <div>{{eventname}}</div>
-                                <div>{{time}}</div>
-                                <div>{{location}}</div>
-                                <div>{{categories}}</div>
-                            {{/each}}
-                                                  
-                    </div>   
+        <section class="1-pad-bot-5 1-sm-pad-bot-3">
+            <div class="js-popular-events">
+                <div class="js-events-list">
+                    {{#each events}}
+                    <div>{{eventname}}</div>
+                    <div>{{time}}</div>
+                    <div>{{location}}</div>
+                    <div>{{categories}}</div>
+                    {{/each}}
+
                 </div>
-            </section>
+            </div>
+        </section>
     </div>
-    
+
     <!--
         {{#each events}}
                                 <div class="g-cell g-cell--has-overflow g-cell-1-1 g-cell-md-1-2-g-cell-lg-1-3 1-pad-vert-3">
@@ -125,35 +125,35 @@
                                 </div>
                             {{/each}}
     -->
-    
+
     <script type="text/javascript">
-        
-       /* $(function(){
-            //grab the template script
-           var theTemplateScript = $("#showevents").html();
-            //compile the template
-            var theTemplate = Handlebars.compile(theTemplateScript);
-            var myItems;
-            //get data from JSON file
-            $.getJSON('data/data.json', function(data){
-                myItems = data; 
-                console.log(myItems);
-            });
-            //Pass our data to the template
-            var theCompiledHtml = theTemplate(myItems);
-            //Add the compiled html to the page
-            $('.content-placeholder').html(theCompiledHtml);
-        });*/
-        
-//        var eventInfo = document.getElementById("showevents").innerHTML;
-        var eventInfo = document.getElementById("showevents");
+        /* $(function(){
+                    //grab the template script
+                   var theTemplateScript = $("#showevents").html();
+                    //compile the template
+                    var theTemplate = Handlebars.compile(theTemplateScript);
+                    var myItems;
+                    //get data from JSON file
+                    $.getJSON('data/data.json', function(data){
+                        myItems = data; 
+                        console.log(myItems);
+                    });
+                    //Pass our data to the template
+                    var theCompiledHtml = theTemplate(myItems);
+                    //Add the compiled html to the page
+                    $('.content-placeholder').html(theCompiledHtml);
+                });*/
+/*
+        var eventInfo = document.getElementById("showevents").innerHTML;
         var template = Handlebars.compile(eventInfo);
         var myItems;
-        $.getJSON('data/data.json', function(data){
-            myItems = data; 
+        $.getJSON('data/data.json', function (data) {
+            myItems = data;
             console.log(myItems);
-        });               
+        });
         document.getElementById("showevents").innerHTML += myItems;
+        */
     </script>
 </body>
+
 </html>
