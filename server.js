@@ -1,4 +1,5 @@
 var express = require('express');
+var handlebars = require('handlebars');
 var app = express();
 
 //set the port of our application 
