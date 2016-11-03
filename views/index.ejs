@@ -11,9 +11,8 @@
     <link href="css/style.css" rel="stylesheet">
     <!-- These lines are needed for Javascript and also enables Heroku to publish our app -->
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
     <script src="js/handlebars-v4.0.5.js"></script>
-    <script src="js/index.js"></script>
+    <!--<script src="js/index.js"></script>-->
 
     <script language="JavaScript" type="text/javascript">
         function login(showhide) {
@@ -122,11 +121,9 @@
     <script type="text/javascript">
         var eventInfo = document.getElementById("show-events").innerHTML;
         var template = Handlebars.compile(eventInfo);
-        var data = require('../data.json');
-            exports.view = function(req, res){
-        console.log(data);
-        res.render('index.ejs');
-    }                    
+        $.getJSON('../data.json', function(data){
+            console.log(data);          
+        });                  
         document.getElementById("data").innerHTML == data;
     </script>
 </body>
