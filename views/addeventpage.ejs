@@ -56,18 +56,28 @@
     </nav>
 
     <div class="row-bottom-margin" role="row">
-        <form name="createEvent" method="" action="" onsubmit="return validateForm(this)">
+        <form name="createEvent" onsubmit="return checkform(this)">
+            <header>
+                <h2>Create Event</h2>
+                <p>Fill out all fields to upload event!</p>
+            </header>
+            <label>Import Image</label>
             <input type="button" name="addImage" value="img"/><br />
-            <input type="text" name="EventName" value="eventName"/><br />
-            <input type="text" name="startDate" value="eventstartDate"/>
+            <label>Event Name</label>
+            <input type="text" name="EventName" value="Enter Event Name"/><br />
+            <label>Start Date</label>
+            <input type="text" name="startDate" value=""/>
+            <lable>Start Time</lable>
             <input type="text" name="startTime"
-            value="eventstartTime"/><br />
+            value=""/><br />
+            <lable>End Date</lable>
             <input type="text" name="endDate"
-            value="eventendDate"/>
-            <input type="text" name="endTime" value="eventendTime"/><br />
-            <input type="text" name="Details" value="eventDetials"/><br />
-            <input type="button" name="Import"
-            value="eventPhoto"/>
+            value=""/>
+            <lable>End Time</lable>
+            <input type="text" name="endTime" value=""/><br />
+            <lable>Details</lable>
+            <textarea col="15" name="details" placeholder="Details about the event." rows="10"></textarea><br />
+            <input class="submit" type="submit" value="Create Event">
         </form>
     
      <!-- <table>
