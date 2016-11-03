@@ -2,10 +2,11 @@
   "name": "literate-spoon",
   "description": "Setting up server",
   "main": "server.js",
-  "scripts":{
+  "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "latest"
+    "express": "latest",
+    "handlebars": "^4.0.5"
   }
 }
